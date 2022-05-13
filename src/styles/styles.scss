@@ -1,0 +1,19 @@
+// Fonts
+
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+// Variables
+$dark_blue: #21325E;
+$header_black: #212529;
+$purple: #533E85;
+
+@import './components/navbar';
+@import './components/home';
+@import './components/three-countries';
+@import './components/favorities.scss';
+@import './components/countries';
+@import './components/not-found';
+@import './components/countries-details';
+@import './components/loading';
+
