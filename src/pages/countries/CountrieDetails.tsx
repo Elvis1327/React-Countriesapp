@@ -66,19 +66,7 @@ export const CountrieDetails = () => {
                             <h2 style={{margin: '0px'}}>Capital:</h2>
                             <span>{res.capital}</span>
                         </article>
-
-                        <article className="_one-countrie-detail-information-add-favorite">
-                            <h2>Add to Favorite:</h2>
-                            {/* Heart Icon */}
-                            <AiOutlineHeart 
-                                className={`${
-                                isFavorite === false 
-                                ? '_add-to-favorite-icon' 
-                                : '_add-to-favorite-icon active'}`} 
-                                onClick={handleIsCountrieFavoritie}    
-                            />
-                        </article>
-
+                        
                         <button
                             className='_one-countrie-detail-button'
                             onClick={handleGoBack}

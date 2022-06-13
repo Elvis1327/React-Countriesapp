@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { Input, Loading } from '../../components';
+import { OneInputText } from 'oneinputtext';
+
+import { Loading } from '../../components';
 import { AllCountriesSearch } from '../../components/index';
 import { getAllCountriesAction } from '../../features/countriesSlice';
-import { getFilteredCountries } from '../../helpers/countries-fetch';
+import { getFilteredCountries } from '../../utils/countries-fetch';
 import { CountriesProps } from '../../interfaces/countriesProps';
 import { ReducerProps } from '../../interfaces/one-countrie-props';
 
@@ -22,7 +24,7 @@ export const Countries = () => {
 
   return (
     <div className="_countries-main-container">
-      <Input 
+      <OneInputText 
         className='_input-countries'
         name='countries'
         placeHolder='Introduce a Countrie name'
@@ -30,13 +32,18 @@ export const Countries = () => {
         value={countriesInput}
         onChange={(e: any) => setCountriesInput(e.target.value)}
       />
+      {data.length <= 0 &&
+        <div className="alert alert-danger" role="alert">
+          There are not Countries with this Name
+        </div>
+      }
       {allCountriesLoading
         ?
         <Loading />
         :
         <div className="_all-cards-search-countries-container">
           {data.map((res:CountriesProps, idx: number) => (
-              <AllCountriesSearch countries={res} key={idx}  />
+            <AllCountriesSearch countries={res} key={idx}  />
           ))}
         </div>
       }

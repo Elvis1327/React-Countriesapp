@@ -5,7 +5,7 @@ import { Loading } from '../../components';
 import { ThreeCountries } from '../../components/countries/ThreeCountries';
 
 import { getAllCountriesAction } from '../../features/countriesSlice';
-import { getSomeCountries } from '../../helpers/countries-fetch';
+import { getSomeCountries } from '../../utils/countries-fetch';
 import { ReducerProps } from '../../interfaces/one-countrie-props';
 
 export const Home = () => {

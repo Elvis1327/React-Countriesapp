@@ -18,7 +18,7 @@ export const getCountrieByParams = async (name:string) => {
 };
 
 // Get some countries
-export const getSomeCountries = (data: any) => {
+export const getSomeCountries = (data: any = []) => {
     const resp = data.slice(0,3);
     return resp;
 };

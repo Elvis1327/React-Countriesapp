@@ -51,19 +51,85 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1033px){
+.alert-danger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: -15px;
+}
+
+
+
+@media screen and (max-width: 2700px){
     ._all-cards-search-countries-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+        font-family: 'Roboto', sans-serif;
     }
-    
+}
+
+@media screen and (max-width: 2000px){
+    ._all-cards-search-countries-container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+@media screen and (max-width: 1700px){
+    ._all-cards-search-countries-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+
+@media screen and (max-width: 1033px){
+    ._countries-main-container{
+        padding: 50px 20px;
+    }
+    ._all-cards-search-countries-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        font-family: 'Roboto', sans-serif;
+    }  
 }
 
 @media screen and (max-width:799px){
     ._countries-main-container{
-        padding-top: 80px;
+        padding: 70px 20px;
     }
+}
+
+@media screen and (max-width: 700px){
+    ._countries-main-container{
+        padding: 70px 20px;
+    }
+    ._all-cards-search-countries-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        font-family: 'Roboto', sans-serif;
+    }  
+}
+
+@media screen and (max-width: 450px){
+    ._countries-main-container{
+        padding: 50px 20px;
+    }
+    ._all-cards-search-countries-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        font-family: 'Roboto', sans-serif;
+    }  
 }
 
 

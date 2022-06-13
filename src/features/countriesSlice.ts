@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice }  from '@reduxjs/toolkit';
 
-import { getAllCountries, getCountrieByParams } from '../helpers/countries-fetch';
+import { getAllCountries, getCountrieByParams } from '../utils/countries-fetch';
 
 
 export const getAllCountriesAction = createAsyncThunk(
@@ -32,7 +32,6 @@ const countriesSlice = createSlice({
         allCountriesLoading: true,
         threeCountriesLoading: true,
         getOneCountrie: [],
-        allFavoritiesCountries: JSON.parse(localStorage.getItem('countries_favorities') || "{}")
     },
     reducers: {},
     extraReducers: (builder) => {
@@ -48,9 +47,6 @@ const countriesSlice = createSlice({
         .addCase(getOneCountrieByParamsAction.fulfilled, (state, action) => {
             state.getOneCountrie = action.payload;
         })
-        .addCase(addFavoritieCountrie.fulfilled, (state, action) => {
-            state.allFavoritiesCountries = action.payload
-        });
     }
 });
 

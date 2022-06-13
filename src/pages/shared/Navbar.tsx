@@ -13,7 +13,7 @@ export const Navbar = () => {
             </Link>
             {/* Just for Responsive */}
             <div className="_just-for-responsive">
-                <Link to="/" className="_navbar-h1-tittle">
+                <Link role="holaelvis" to="/" className="_navbar-h1-tittle">
                     CountriesApp
                 </Link>
                 <GiHamburgerMenu 
