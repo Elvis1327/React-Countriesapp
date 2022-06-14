@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 import { CountriesProps } from '../interfaces/countriesProps'
-import { ReducerProps } from '../interfaces/one-countrie-props';
 
 const mainUrl = `https://restcountries.com/v3.1/all`;
 
